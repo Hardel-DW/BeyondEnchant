@@ -1,4 +1,4 @@
-# BeyondEnchant V1, The ultimate enchantment expansion
+# BeyondEnchant V1 - The ultimate enchantment expansion
 ![beyond](https://github.com/Hardel-DW/BeyondEnchant/assets/42413417/d107bc40-c48c-47b2-91eb-8a012a55c95c)
 
 # BeyondEnchant !
@@ -64,7 +64,7 @@ Thanks to all the contributors who have helped in developing these enchantments 
 
 ## Bugs
 If you find any bugs, please report them on GitHub.
-[https://github.com/YourUsername/InfiniteEnchant/issues](https://github.com/Hardel-DW/BeyondEnchant/issues)
+[Bugs](https://github.com/Hardel-DW/BeyondEnchant/issues)
 
 ## Contributing
 You can contribute on the official Github. We welcome all contributions that help in enhancing this project and making Minecraft more enjoyable for everyone.
