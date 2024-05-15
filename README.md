@@ -1,5 +1,5 @@
 # BeyondEnchant V1, The ultimate enchantment expansion
-![infinite_enchant_logo](https://github.com/YourUsername/InfiniteEnchant/assets/your-asset-id/logo.png)
+![beyond](https://github.com/Hardel-DW/BeyondEnchant/assets/42413417/d107bc40-c48c-47b2-91eb-8a012a55c95c)
 
 # BeyondEnchant !
 BeyondEnchant is the ultimate expansion for enchantments, developed by Hardel. This mod allows you to break the traditional limits of enchantments, introducing unprecedented flexibility and power to your Minecraft experience. Enhance your gear beyond the vanilla constraints and explore new heights of gameplay.
@@ -56,10 +56,6 @@ NeoEnchant+ is the official TechnicalEnchant+ update by Hardel. Introduces a new
 - **GitHub**: Contribute on [GitHub](https://github.com/Hardel-DW/NeoEnchant).
 - **Download**: [NeoEnchant+ on Modrinth](https://modrinth.com/datapack/neoenchant)
 
-## Contributing
-You can contribute on the official GitHub. We welcome all contributions that help enhance this project and make Minecraft more enjoyable for everyone.
-[https://github.com/YourUsername/InfiniteEnchant](https://github.com/YourUsername/InfiniteEnchant)
-
 ## License
 This project is licensed under the Voxel License - see the LICENSE file for details.
 
@@ -68,4 +64,11 @@ Thanks to all the contributors who have helped in developing these enchantments 
 
 ## Bugs
 If you find any bugs, please report them on GitHub.
-[https://github.com/YourUsername/InfiniteEnchant/issues](https://github.com/YourUsername/InfiniteEnchant/issues)
+[https://github.com/YourUsername/InfiniteEnchant/issues](https://github.com/Hardel-DW/BeyondEnchant/issues)
+
+## Contributing
+You can contribute on the official Github. We welcome all contributions that help in enhancing this project and making Minecraft more enjoyable for everyone.
+You can also come on the discord ! [Hardel Lab's Discord](https://discord.gg/mVpYB6kF93)  
+
+
+[![discord_700](https://github.com/Hardel-DW/NeoEnchant/assets/42413417/d36d60d5-18f7-40e0-9d2d-dc610f6d42a5)](https://discord.gg/mVpYB6kF93)  
