@@ -46,6 +46,7 @@ BeyondEnchant not introduces new enchantments, but also increases the maximum le
 | **Smite** | 10 | Increases damage against undead |
 | **Sweeping Edge** | 10 | Increases sweep attack damage |
 | **Swift Sneak** | 8 | Increases sneaking speed |
+| **Soul Speed** | 7 | Increases soul speed |
 | **Thorns** | 7 | Damages attackers |
 | **Unbreaking** | 10 | Increases item durability |
 | **Wind Burst** | 10 | Increases the wind charge knockback |
