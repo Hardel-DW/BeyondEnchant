@@ -31,7 +31,7 @@ BeyondEnchant not introduces new enchantments, but also increases the maximum le
 | **Looting** | 9 | Increases mob drops |
 | **Loyalty** | 8 | Increases trident return speed |
 | **Luck of the Sea** | 10 | Increases fishing luck |
-| **Lure** | 10 | Increases fishing speed |
+| **Lure** | 5 | Increases fishing speed |
 | **Mending** | 5 | The repairs is increased for each level |
 | **Multishot** | 5 | Shoot more arrows at once |
 | **Piercing** | 10 | Arrows can pierce through multiple entities |
