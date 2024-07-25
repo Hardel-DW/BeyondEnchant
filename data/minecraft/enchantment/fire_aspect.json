@@ -11,8 +11,8 @@
           "type": "minecraft:ignite",
           "duration": {
             "type": "minecraft:linear",
-            "base": 4.0,
-            "per_level_above_first": 4.0
+            "base": 3.0,
+            "per_level_above_first": 3.0
           }
         },
         "enchanted": "attacker",
@@ -29,7 +29,7 @@
     "base": 60,
     "per_level_above_first": 20
   },
-  "max_level": 7,
+  "max_level": 4,
   "min_cost": {
     "base": 10,
     "per_level_above_first": 20
