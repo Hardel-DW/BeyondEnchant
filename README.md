@@ -1,4 +1,4 @@
-# BeyondEnchant V1 - Breaks the limits of enchantment
+# BeyondEnchant V1.5 - Breaks the limits of enchantment
 ![beyond](https://github.com/Hardel-DW/BeyondEnchant/assets/42413417/d107bc40-c48c-47b2-91eb-8a012a55c95c)
 
 # BeyondEnchant !
