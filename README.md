@@ -10,46 +10,47 @@ BeyondEnchant is fully compatible with NeoEnchant, bringing you even more possib
 ## New limits
 BeyondEnchant not introduces new enchantments, but also increases the maximum level of existing enchantments. This allows you to push your gear to new heights and customize your gameplay to suit your style, play now for fun and enjoy the new enchantments limits.
 
+
 | Enchantment |  New Max Level | Detail |
 | --- | --- | --- |
 | **Aqua Affinity** | 5 | Allows you to breathe longer underwater |
 | **Bane of Arthropods** | 10 | Increases damage against arthropods |
-| **Blast Protection** | 10 | Reduces damage from explosions |
-| **Breach** | 8 | Reduce armor effectiveness |
+| **Blast Protection** | 7 | Reduces damage from explosions |
+| **Breach** | 5 | Reduce armor effectiveness |
 | **Channeling** | 5 | Summons lightning at the target |
-| **Density** | 10 | Increases the smash attack per block with mace |
-| **Depth Strider** | 8 | Increases underwater movement speed |
+| **Density** | 5 | Increases the smash attack per block with mace |
+| **Depth Strider** | 3 | Increases underwater movement speed |
 | **Efficiency** | 10 | Increases mining speed |
 | **Feather Falling** | 10 | Reduces fall damage |
-| **Fire Aspect** | 7 | The time of ignite is increased |
-| **Fire Protection** | 10 | Reduces damage from fire |
-| **Flame** | 7 | The time of ignite is increased |
-| **Fortune** | 9 | Increases block drops |
+| **Fire Aspect** | 4 | The time of ignite is increased |
+| **Fire Protection** | 7 | Reduces damage from fire |
+| **Flame** | 5 | The time of ignite is increased |
+| **Fortune** | 5 | Increases block drops |
 | **Frost Walker** | 8 | Freezes water |
 | **Impaling** | 10 | Increases damage against sea creatures |
 | **Knockback** | 10 | Increases knockback |
-| **Looting** | 9 | Increases mob drops |
+| **Looting** | 5 | Increases mob drops |
 | **Loyalty** | 8 | Increases trident return speed |
-| **Luck of the Sea** | 10 | Increases fishing luck |
+| **Luck of the Sea** | 5 | Increases fishing luck |
 | **Lure** | 5 | Increases fishing speed |
 | **Mending** | 5 | The repairs is increased for each level |
-| **Multishot** | 5 | Shoot more arrows at once |
+| **Multishot** | 3 | Shoot more arrows at once |
 | **Piercing** | 10 | Arrows can pierce through multiple entities |
-| **Power** | 10 | Increases bow damage |
-| **Projectile Protection** | 10 | Reduces damage from projectiles |
-| **Protection** | 10 | Reduces all damage |
+| **Power** | 7 | Increases bow damage |
+| **Projectile Protection** | 7 | Reduces damage from projectiles |
+| **Protection** | 5 | Reduces all damage |
 | **Punch** | 10 | Increases arrow knockback |
-| **Quick Charge** | 7 | Reduces crossbow reload time |
+| **Quick Charge** | 5 | Reduces crossbow reload time |
 | **Respiration** | 8 | Increases the number oxygen bubbles |
 | **Riptide** | 8 | Launches the player when thrown |
-| **Sharpness** | 10 | Increases melee damage |
+| **Sharpness** | 7 | Increases melee damage |
 | **Smite** | 10 | Increases damage against undead |
+| **Soul Speed** | 7 | Increases movement speed on soul sand |
 | **Sweeping Edge** | 10 | Increases sweep attack damage |
-| **Swift Sneak** | 8 | Increases sneaking speed |
-| **Soul Speed** | 7 | Increases soul speed |
-| **Thorns** | 7 | Damages attackers |
+| **Swift Sneak** | 7 | Increases sneaking speed |
+| **Thorns** | 4 | Damages attackers |
 | **Unbreaking** | 10 | Increases item durability |
-| **Wind Burst** | 10 | Increases the wind charge knockback |
+| **Wind Burst** | 5 | Increases the wind charge knockback |
 
 
 ### What's is NeoEnchant+ ?
