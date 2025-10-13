@@ -1,0 +1,104 @@
+name: Publish to Modrinth
+
+on:
+  push:
+    tags:
+      - 'v*'
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    env:
+      MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+      MR_PROJECT_ID: ${{ vars.MR_PROJECT_ID }}
+      MR_GAME_VERSIONS: ${{ vars.MR_GAME_VERSIONS }}
+      MR_LOADERS: ${{ vars.MR_LOADERS }}
+      MR_VERSION_TYPE: ${{ vars.MR_VERSION_TYPE }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Déterminer la version depuis le tag ou la release
+        id: ver
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "release" ]]; then
+            VERSION="${GITHUB_REF_NAME#v}"
+          else
+            VERSION="${GITHUB_REF_NAME#refs/tags/}"
+            VERSION="${VERSION#v}"
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Générer le changelog
+        id: changelog
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "release" ]]; then
+            BODY="$(jq -r '.release.body // empty' "$GITHUB_EVENT_PATH")"
+            if [[ -n "$BODY" && "$BODY" != "null" ]]; then
+              printf "%s" "$BODY" > CHANGELOG_MODRINTH.md
+              echo "source=release" >> "$GITHUB_OUTPUT"
+              echo "path=CHANGELOG_MODRINTH.md" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
+          PREV_TAG="$(git describe --tags --abbrev=0 "${GITHUB_SHA}^" 2>/dev/null || true)"
+          if [[ -n "$PREV_TAG" ]]; then
+            git log --no-merges --format='- %s (%h)' "${PREV_TAG}..HEAD" > CHANGELOG_MODRINTH.md
+          else
+            git log --no-merges --format='- %s (%h)' > CHANGELOG_MODRINTH.md
+          fi
+          echo "source=gitlog" >> "$GITHUB_OUTPUT"
+          echo "path=CHANGELOG_MODRINTH.md" >> "$GITHUB_OUTPUT"
+
+      - name: Préparer l’artefact (zip)
+        id: zip
+        run: |
+          ZIP_NAME="project-${{ steps.ver.outputs.version }}.zip"
+          zip -r "$ZIP_NAME" . -x ".git/*" ".github/*"
+          echo "zip=$ZIP_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Publier sur Modrinth (API REST)
+        shell: bash
+        env:
+          VERSION: ${{ steps.ver.outputs.version }}
+          ZIP_FILE: ${{ steps.zip.outputs.zip }}
+          CHANGELOG_PATH: ${{ steps.changelog.outputs.path }}
+        run: |
+          DATA_JSON=$(jq -n \
+            --arg project_id "$MR_PROJECT_ID" \
+            --arg name "v${VERSION}" \
+            --arg version_number "$VERSION" \
+            --arg version_type "${MR_VERSION_TYPE:-release}" \
+            --arg changelog "$(cat "$CHANGELOG_PATH")" \
+            --argfile game_versions <(printf '%s' "${MR_GAME_VERSIONS:-[]}") \
+            --argfile loaders <(printf '%s' "${MR_LOADERS:-[]}") \
+            '{
+              project_id: $project_id,
+              name: $name,
+              version_number: $version_number,
+              changelog: $changelog,
+              version_type: $version_type,
+              game_versions: $game_versions,
+              loaders: $loaders,
+              featured: false,
+              file_parts: ["file"],
+              primary_file: "file"
+            }')
+
+          http_code=$(curl -sS -o response.json -w "%{http_code}" \
+            -X POST "https://api.modrinth.com/v2/version" \
+            -H "Authorization: ${MODRINTH_TOKEN}" \
+            -H "User-Agent: $GITHUB_REPOSITORY CI" \
+            -F "data=${DATA_JSON};type=application/json" \
+            -F "file=@${ZIP_FILE};type=application/zip;filename=${ZIP_FILE}")
+
+          cat response.json | jq . || cat response.json
+          test "$http_code" -ge 200 -a "$http_code" -lt 300
