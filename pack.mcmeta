@@ -1,6 +1,11 @@
 {
     "pack": {
-        "pack_format": 57,
-        "description": "Break the vanilla enchant limit - By Voxel Team"
+        "pack_format": 88,
+        "supported_formats": [80, 88],
+        "min_format": 80,
+        "max_format": 88,
+        "description": {
+            "text": "Break the vanilla enchant limit - By Voxel Team"
+        }
     }
 }

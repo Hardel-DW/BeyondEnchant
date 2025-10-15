@@ -1,0 +1,45 @@
+project:
+  version: 1.5.0
+  name: Beyond Enchant
+  filename: BeyondEnchant
+modrinth:
+  enabled: true
+  project_id: t2pMCVgG
+  featured: false
+curseforge:
+  datapack:
+    enabled: false
+    project_id: null
+  mod:
+    enabled: true
+    project_id: 1135664
+    java_versions:
+      - Java 21
+    environments:
+      - server
+package_as_mod:
+  enabled: true
+  loaders:
+    - fabric
+    - forge
+    - neoforge
+    - quilt
+  id: mr_beyondenchant
+  authors:
+    - Hardel
+    - Voxel Teams
+  filename: BeyondEnchant
+  homepage: https://hardels-organization.gitbook.io/voxel
+  sources: https://github.com/Hardel-DW/BeyondEnchant
+  issues: https://github.com/Hardel-DW/BeyondEnchant/issues
+build:
+  exclude:
+    - .git
+    - .github
+    - .changeset
+    - .vscode
+    - .cursor
+    - node_modules
+    - README.md
+    - .gitignore
+    - deploy.yaml
