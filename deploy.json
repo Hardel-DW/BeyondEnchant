@@ -1,0 +1,101 @@
+{
+    "project": {
+        "version": "1.7.0",
+        "name": "Beyond Enchant",
+        "filename": "BeyondEnchant"
+    },
+    "modrinth": {
+        "enabled": true,
+        "project_id": "t2pMCVgG",
+        "featured": false,
+        "dependencies": [
+            {
+                "id": "BynmO8IO",
+                "relation": "optional"
+            },
+            {
+                "id": "bHyNNNwZ",
+                "relation": "optional"
+            },
+            {
+                "id": "hwNDseBp",
+                "relation": "optional"
+            },
+            {
+                "id": "nJLo0AtD",
+                "relation": "optional"
+            }
+        ]
+    },
+    "curseforge": {
+        "datapack": {
+            "enabled": false,
+            "project_id": null,
+            "dependencies": []
+        },
+        "mod": {
+            "enabled": true,
+            "project_id": 1135664,
+            "java_versions": [
+                "Java 17"
+            ],
+            "environments": [
+                "server"
+            ],
+            "dependencies": [
+                {
+                    "id": 1135663,
+                    "relation": "optional",
+                    "slug": "neoenchant"
+                },
+                {
+                    "id": 1300883,
+                    "relation": "optional",
+                    "slug": "ne-addons-structure"
+                },
+                {
+                    "id": 1135665,
+                    "relation": "optional",
+                    "slug": "yggdrasils"
+                },
+                {
+                    "id": 1417361,
+                    "relation": "optional",
+                    "slug": "yggdrasil-alternative"
+                }
+            ]
+        }
+    },
+    "package_as_mod": {
+        "enabled": true,
+        "loaders": [
+            "fabric",
+            "forge",
+            "neoforge",
+            "quilt"
+        ],
+        "id": "mr_beyondenchant",
+        "authors": [
+            "Hardel",
+            "Voxel Teams"
+        ],
+        "filename": "BeyondEnchant",
+        "homepage": "https://hardels-organization.gitbook.io/voxel",
+        "sources": "https://github.com/Hardel-DW/BeyondEnchant",
+        "issues": "https://github.com/Hardel-DW/BeyondEnchant/issues"
+    },
+    "build": {
+        "exclude": [
+            ".git",
+            ".github",
+            ".changeset",
+            ".vscode",
+            ".cursor",
+            "node_modules",
+            "README.md",
+            ".gitignore",
+            "deploy.yaml",
+            "deploy.json"
+        ]
+    }
+}
